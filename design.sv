@@ -1,4 +1,4 @@
-`include "Single_Cycle_Processor.sv"
+`include "Pipelined_Processor.sv"
 `include "Controller.sv"
 `include "Main_Decoder.sv"
 `include "ALU_Decoder.sv"
@@ -17,6 +17,8 @@
 `include "pipeline_e.sv"
 `include "pipeline_m.sv"
 `include "pipeline_w.sv"
+`include "forwarding_unit.sv"
+`include "hazard_unit.sv"   
 
 module top(input logic clk, reset,
 output logic [31:0] WriteData, DataAdr,
